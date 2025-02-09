@@ -16,13 +16,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.PAT_TOKEN }}  # Use PAT instead of default token
+          token: ${{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}}  # Use PAT instead of default token
 
       - name: Identify user (23f3001462@ds.study.iitm.ac.in)
         run: echo "Running workflow as part of daily commit process"
-
-      - name: Make a change
-        run: echo "Daily update: $(date)" >> daily_update.txt
 
       - name: Commit and push changes
         run: |
